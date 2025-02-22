@@ -1,10 +1,10 @@
-import { publicProcedure, router } from "./trpc";
+import { createPublicProcedure, createRouter } from "./trpc";
 
 /** This is the root router of our tRPC API.
  *
  * The root router merges all our procedures together to be accessible via `app/api/trpc/[trpc]`. */
-export const rootRouter = router({
-  getTodos: publicProcedure.query(async () => {
+export const rootRouter = createRouter({
+  getTodos: createPublicProcedure.query(async () => {
     return ["Buy laundry detergent", "Mop the floors", "Replace air filters"];
   }),
 });
