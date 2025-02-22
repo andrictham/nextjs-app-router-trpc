@@ -8,7 +8,7 @@ import { rootRouter } from "@/src/server/rootRouter";
  *
  * e.g. `/api/trpc/getTodos` will call the `getTodos` procedure.
  *
- * Because Next.js App Router route handlers use web standards, we can use the vanilla fetch adapter from tRPC, instead of a Next.js-specific adapter, like the one required by Next.js Pages Router.
+ * Because Next.js App Router route handlers use web standards, we can use the vanilla fetch adapter from tRPC, instead of a Next.js-specific adapter like the one required by Next.js Pages Router.
  */
 const handler = (req: Request) =>
   fetchRequestHandler({
